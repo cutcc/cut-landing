@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cut · 一站式在线剪辑</title>
+<meta name="description" content="Cut：一站式在线剪辑。上传、剪切、拼接、字幕、转场、导出，一个页面全搞定，浏览器里直接用，不用下载安装。">
+<style>
+  :root{
+    --primary:#0D9488; --secondary:#D97706; --accent:#2563EB;
+    --bg:#FFFFFF; --fg:#0F172A; --muted:#475569; --muted-bg:#F0FDFA; --border:#D9EDEA;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--fg);
+    font-family:ui-sans-serif,system-ui,-apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    font-size:16px;line-height:1.6}
+  a{color:inherit}
+  .wrap{max-width:960px;margin:0 auto;padding:32px 20px 48px}
+  header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.02em;font-size:20px}
+  .brand svg{width:32px;height:32px;flex:none}
+  .pill{font-size:12px;color:var(--muted);border:1px solid var(--border);background:var(--muted-bg);
+    padding:6px 10px;border-radius:999px;white-space:nowrap}
+  .hero{margin:64px 0 28px;text-align:left}
+  .hero h1{font-size:clamp(40px,8vw,64px);line-height:1.12;margin:0 0 16px;letter-spacing:-.01em}
+  .hero h1 .cut{color:var(--primary)}
+  .hero p{color:var(--muted);font-size:18px;max-width:640px;margin:0 0 24px}
+  .hero p b{color:var(--fg)}
+  .cta{display:flex;flex-wrap:wrap;gap:12px}
+  .btn{display:inline-block;text-decoration:none;font-weight:700;padding:12px 24px;border-radius:999px}
+  .btn-primary{background:var(--primary);color:#fff}
+  .btn-ghost{border:1px solid var(--border);color:var(--fg)}
+  .section{margin-top:56px}
+  .section h2{font-size:26px;margin:0 0 6px}
+  .section>p{color:var(--muted);margin:0 0 20px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media (max-width:720px){.grid{grid-template-columns:1fr}.hero{margin-top:40px}}
+  .card{border:1px solid var(--border);border-radius:16px;padding:22px;background:#fff}
+  .card .top{height:6px;border-radius:999px;margin-bottom:16px;background:var(--primary)}
+  .card:nth-child(2) .top{background:var(--secondary)}
+  .card:nth-child(3) .top{background:var(--accent)}
+  .card:nth-child(4) .top{background:var(--accent)}
+  .card:nth-child(5) .top{background:var(--secondary)}
+  .card:nth-child(6) .top{background:var(--primary)}
+  .card h3{margin:0 0 6px;font-size:20px}
+  .card p{margin:0;color:var(--muted);font-size:15px}
+  .tag{display:inline-block;margin-top:12px;font-size:12px;color:var(--primary);background:var(--muted-bg);
+    padding:3px 9px;border-radius:999px}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:step}
+  @media (max-width:720px){.steps{grid-template-columns:1fr}}
+  .step{border:1px solid var(--border);border-radius:16px;padding:22px}
+  .step .num{font-size:28px;font-weight:800;color:var(--primary)}
+  .step h3{margin:8px 0 6px;font-size:20px}
+  .step p{margin:0;color:var(--muted);font-size:15px}
+  .note{margin-top:20px;color:var(--muted);font-size:13px}
+  footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--border);color:var(--muted);font-size:13px;display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="9" cy="9" r="5" fill="none" stroke="#0D9488" stroke-width="2.5"/><circle cx="9" cy="23" r="5" fill="none" stroke="#0D9488" stroke-width="2.5"/><path d="M13 12 L28 25 M13 20 L28 7" stroke="#0D9488" stroke-width="2.5" stroke-linecap="round"/></svg>
+      Cut
+    </div>
+    <span class="pill">在线剪辑 · 免安装</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>一站式剪辑，<br><span class="cut">一个页面全搞定</span></h1>
+      <p>上传、剪切、拼接、字幕、转场、导出，<b>不用下载安装</b>，打开浏览器就能剪。给短视频、Vlog、口播和混剪准备的一站式工具站。</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#features">开始剪辑 →</a>
+        <a class="btn btn-ghost" href="#how">三步怎么剪</a>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <h2>剪辑要用的，这里都有</h2>
+      <p>先从最常用的六个功能开始，工具正在陆续上线。</p>
+      <div class="grid">
+        <div class="card">
+          <div class="top"></div>
+          <h3>剪切拼接</h3>
+          <p>拖一下时间轴就能剪掉废片、拼好顺序，支持多段拼接和变速。</p>
+          <span class="tag">即将上线</span>
+        </div>
+        <div class="card">
+          <div class="top"></div>
+          <h3>字幕</h3>
+          <p>自动识别语音生成字幕，改字、调样式、卡时间点都在一处。</p>
+          <span class="tag">即将上线</span>
+        </div>
+        <div class="card">
+          <div class="top"></div>
+          <h3>模板</h3>
+          <p>卡点、口播、旅行、开箱，套个模板就能出片，不用从零排版。</p>
+          <span class="tag">即将上线</span>
+        </div>
+        <div class="card">
+          <div class="top"></div>
+          <h3>音乐音效</h3>
+          <p>配乐、音效、淡入淡出，音量和节奏跟着画面走。</p>
+          <span class="tag">即将上线</span>
+        </div>
+        <div class="card">
+          <div class="top"></div>
+          <h3>转场特效</h3>
+          <p>淡入、滑动、缩放，常用转场和滤镜点一下就能加上。</p>
+          <span class="tag">即将上线</span>
+        </div>
+        <div class="card">
+          <div class="top"></div>
+          <h3>高清导出</h3>
+          <p>剪完直接导出高清视频，支持竖屏、横屏和方形，适配各平台。</p>
+          <span class="tag">即将上线</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how">
+      <h2>三步怎么剪</h2>
+      <p>不用学复杂的 timeline，先把片子剪出来再说。</p>
+      <div class="steps">
+        <div class="step">
+          <div class="num">01</div>
+          <h3>上传素材</h3>
+          <p>把视频、图片、音频拖进来，支持手机和电脑上常见的格式。</p>
+        </div>
+        <div class="step">
+          <div class="num">02</div>
+          <h3>剪辑加工</h3>
+          <p>剪切、加字幕、套模板、配音乐，在时间轴上一次做完。</p>
+        </div>
+        <div class="step">
+          <div class="num">03</div>
+          <h3>导出分享</h3>
+          <p>选好比例和清晰度，导出就能发，成片存在本地，不用上传服务器等半天。</p>
+        </div>
+      </div>
+      <p class="note">本站为静态落地页，剪辑工具正在搭建中，上线后这里会直接变成工具入口。</p>
+    </section>
+  </main>
+
+  <footer>
+    <span>Cut · 一站式在线剪辑</span>
+    <span>打开浏览器就能剪</span>
+  </footer>
+</div>
+</body>
+</html>
